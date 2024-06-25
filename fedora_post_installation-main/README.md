@@ -81,3 +81,7 @@ sudo systemctl disable nvidia-powerd.service
 sudo nano /etc/modprobe.d/EVIOCSKEYCODE.conf
 blacklist eeepc_wmi
 ```
+```
+sudo nano /etc/modprobe.d/nvidia.conf
+options nvidia-drm modeset=1
+```
