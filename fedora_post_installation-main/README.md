@@ -67,7 +67,17 @@ sudo systemctl enable virtnetworkd.service
 ### Secure Boot
 ```
 sudo kmodgenca -a
+
+sudo systemctl disable nvidia-powerd.service
 sudo mokutil --import /etc/pki/akmods/certs/public_key.der
 sudo akmods --force
 sudo dracut --force
+```
+### Fix errors
+```
+sudo systemctl disable nvidia-powerd.service
+```
+```
+sudo nano /etc/modprobe.d/EVIOCSKEYCODE.conf
+blacklist eeepc_wmi
 ```
